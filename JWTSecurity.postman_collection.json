@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "d1766485-da71-40c3-bb38-09cb8df26056",
+		"name": "JWTSecurity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24767275"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJua2RlYnVnIiwiZXhwIjoxNjcxNDg3MzA1LCJpYXQiOjE2NzE0NTEzMDV9.xDyk757H7lVDzde3VuISTederEBgl69pnptnRvpp3qo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3112/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3112",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "to get tokken",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"userName\":\"nkdebug\",\r\n\"password\":\"nkdebug\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3112/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3112",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
